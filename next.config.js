@@ -1,12 +1,11 @@
-const withSourceMaps = require("@zeit/next-source-maps");
-require("dotenv").config();
+const withSourceMaps = require('@zeit/next-source-maps')()
+const { parsed: localEnv } = require('dotenv').config()
+const webpack = require('webpack')
 
 module.exports = withSourceMaps({
-  target: "serverless",
-  env: {
-    SENTRY_DSN: process.env.SENTRY_DSN
-  },
+  target: 'serverless',
   webpack(config) {
-    return config;
-  }
-});
+    config.plugins.push(new webpack.EnvironmentPlugin(localEnv))
+    return config
+  },
+})
