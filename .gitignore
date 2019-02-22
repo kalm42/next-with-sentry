@@ -1,0 +1,14 @@
+# No annoying mac or windows hidden files
+.DS_Store 
+
+# No need to track external dependencies
+node_modules/
+
+# Environmental Variables
+.env
+
+# No build files
+.next/
+
+# And most importantly (thanks Wes Bos)
+haters/

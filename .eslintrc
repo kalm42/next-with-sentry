@@ -1,0 +1,31 @@
+{
+  "extends": [
+      "airbnb",
+      "prettier"
+  ],
+  "plugins": [
+      "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaVersion": 2018
+  },
+  "env": {
+      "node": true,
+      "browser": true
+  },
+  "rules": {
+      "react/jsx-filename-extension": [
+          1,
+          {
+              "extensions": [
+                  ".js",
+                  ".jsx"
+              ]
+          }
+      ],
+      "react/prop-types": "warn",
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-one-expression-per-line": "off"
+  }
+}
