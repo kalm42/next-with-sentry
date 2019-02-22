@@ -5,7 +5,7 @@ I was having such a difficult time deploying sentry with Next that I decided to 
 ## Setup
 
 1. Have node installed.
-2. Have an account or make an account with (Sentry)[https://sentry.io]
+2. Have an account or make an account with [Sentry](https://sentry.io)
 3. Clone or download this repo.
 4. `cp sample.env .env`
 5. Edit the `.env` file and replace the fake dsn with your own.
