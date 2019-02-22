@@ -1,11 +1,11 @@
+/* eslint prefer-destructuring:0 */
+
 // Code taken from
 // https://gist.github.com/mcdougal/7bf001417c3dc4b579da224b12776691
 import { Component } from 'react'
 import * as Sentry from '@sentry/browser'
-import getConfig from 'next/config'
 
-const { SENTRY_DSN } = getConfig().publicRuntimeConfig
-
+const SENTRY_DSN = process.env.SENTRY_DSN
 Sentry.init({ dsn: SENTRY_DSN })
 
 /**
